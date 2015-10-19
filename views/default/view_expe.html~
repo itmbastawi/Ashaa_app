@@ -1,0 +1,32 @@
+{{extend 'addpages.html'}}
+
+<div class="row">
+  <div class="col-xs-6 col-md-6">
+ <div class="view_or">
+
+  <h2 class='title_ex'>مصروفات</h2>
+<br>
+{{for row in rows:}}
+
+     <table class="table">
+         <tr><td>  رقم الطلب</td> <td>{{=row.id}}  </td> </tr>
+         <tr></tr>
+         <tr><td> بيان المنصرف </td><td>{{=row.expename}}   </td></tr>
+         <tr></tr>
+         <tr><td> القيمة المنصرف</td><td>{{=row.expemount}} ج </td><td>نوع المنصرف</td><td> {{=db.expety(row.expetype).expetype}} </td></tr>
+
+
+
+         <tr><td>{{=row.expedate}}</td></tr>
+     </table>
+   
+
+ 
+ 
+ </div>  
+ 
+        
+       {{pass}}
+{{=A('تعديل او حذف',_class="btn btn-warning",_href=URL('edit_expe',args=row.id))}}
+    </div>
+</div>

@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<type \'exceptions.SyntaxError\'> Field: invalid table name: , use rname for "funny" names'
+p3
+sS'layer'
+p4
+S'/home/mohbastawi/web2py/applications/app1/models/dbacc.py'
+p5
+sS'code'
+p6
+S"db.define_table('doct',\n                Field('docname','string',label='\xd8\xaf\xd9\x83\xd8\xaa\xd9\x88\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xa7\xd8\xb4\xd8\xb9\xd8\xa9'))\n\ndb.define_table('prod',\n                Field('prodname','string',label='\xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'),\n               Field('prodcost','integer',label='\xd8\xaa\xd9\x83\xd9\x84\xd9\x81\xd8\xa9 \xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'))\n\ndb.define_table('orday',\n                Field('custname','string',label='\xd8\xa7\xd8\xb3\xd9\x85 \xd8\xa7\xd9\x84\xd8\xb9\xd9\x85\xd9\x8a\xd9\x84'),\n                Field('docname','reference doct',requires=IS_IN_DB(db,db.doct.id,'%(docname)s'),label='\xd8\xaf\xd9\x83\xd8\xaa\xd9\x88\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xa7\xd8\xb4\xd8\xb9\xd8\xa9'),\n                Field('prodname','reference prod',requires=IS_IN_DB(db,db.prod.id,'%(prodname)s'),label='\xd8\xaa\xd9\x83\xd9\x84\xd9\x81\xd8\xa9 \xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'),\n                Field('sabgha','integer',default=0,label='\xd8\xb3\xd8\xb9\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xb5\xd8\xa8\xd8\xba\xd9\x87'),\n                Field('totalcost',compute=lambda row: db.prod(row['docname']).prodcost+row['sabgha']),\n                Field('ordate','date',default=request.now),\n                Field('ortime','time',default=request.now),\n                Field('notes','text'))\n\ndb.define_table('')\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/mohbastawi/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/mohbastawi/web2py/applications/app1/models/dbacc.py", line 18, in <module>\n    db.define_table(\'\')\n  File "/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py", line 819, in define_table\n    table = self.lazy_define_table(tablename,*fields,**args)\n  File "/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py", line 836, in lazy_define_table\n    table = table_class(self, tablename, *fields, **args)\n  File "/home/mohbastawi/web2py/gluon/packages/dal/pydal/objects.py", line 226, in __init__\n    \'use rname for "funny" names\' % tablename)\nSyntaxError: Field: invalid table name: , use rname for "funny" names\n'
+p11
+s.

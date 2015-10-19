@@ -1,0 +1,411 @@
+(dp1
+S'output'
+p2
+S'<type \'exceptions.SyntaxError\'> invalid table/column name "exp" is a "ALL" reserved SQL/NOSQL keyword'
+p3
+sS'layer'
+p4
+S'/home/mohbastawi/web2py/applications/app1/models/dbacc.py'
+p5
+sS'code'
+p6
+S"db.define_table('doct',\n                Field('docname','string',label='\xd8\xaf\xd9\x83\xd8\xaa\xd9\x88\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xa7\xd8\xb4\xd8\xb9\xd8\xa9'))\n\ndb.define_table('prod',\n                Field('prodname','string',label='\xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'),\n               Field('prodcost','integer',label='\xd8\xaa\xd9\x83\xd9\x84\xd9\x81\xd8\xa9 \xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'))\n\ndb.define_table('orday',\n                Field('custname','string',label='\xd8\xa7\xd8\xb3\xd9\x85 \xd8\xa7\xd9\x84\xd8\xb9\xd9\x85\xd9\x8a\xd9\x84'),\n                Field('docname','reference doct',requires=IS_IN_DB(db,db.doct.id,'%(docname)s'),label='\xd8\xaf\xd9\x83\xd8\xaa\xd9\x88\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xa7\xd8\xb4\xd8\xb9\xd8\xa9'),\n                Field('prodname','reference prod',requires=IS_IN_DB(db,db.prod.id,'%(prodname)s'),label='\xd8\xaa\xd9\x83\xd9\x84\xd9\x81\xd8\xa9 \xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'),\n                Field('sabgha','integer',default=0,label='\xd8\xb3\xd8\xb9\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xb5\xd8\xa8\xd8\xba\xd9\x87'),\n                Field('totalcost',compute=lambda row: db.prod(row['docname']).prodcost+row['sabgha']),\n                Field('ordate','date',default=request.now),\n                Field('ortime','time',default=request.now),\n                Field('notes','text'))\n\ndb.define_table('exp',\n               Field('expname'),\n               Field('expmount','integer',default=0))\n"
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.SyntaxError object>"
+p13
+sS'text'
+p14
+S'None'
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of exceptions.SyntaxError object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of exceptions.SyntaxError object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.SyntaxError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.SyntaxError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.SyntaxError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.SyntaxError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.SyntaxError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.SyntaxError'>"
+p35
+sS'filename'
+p36
+S'None'
+p37
+sS'lineno'
+p38
+S'None'
+p39
+sS'msg'
+p40
+S'\'invalid table/column name "exp" is a "ALL" reserved SQL/NOSQL keyword\''
+p41
+sS'__doc__'
+p42
+S"'Invalid syntax.'"
+p43
+sS'__getitem__'
+p44
+S"<method-wrapper '__getitem__' of exceptions.SyntaxError object>"
+p45
+sS'__setstate__'
+p46
+S'<built-in method __setstate__ of exceptions.SyntaxError object>'
+p47
+sS'__getattribute__'
+p48
+S"<method-wrapper '__getattribute__' of exceptions.SyntaxError object>"
+p49
+sS'print_file_and_line'
+p50
+S'None'
+p51
+sS'args'
+p52
+S'(\'invalid table/column name "exp" is a "ALL" reserved SQL/NOSQL keyword\',)'
+p53
+sS'__subclasshook__'
+p54
+S'<built-in method __subclasshook__ of type object>'
+p55
+sS'offset'
+p56
+S'None'
+p57
+sS'__unicode__'
+p58
+S'<built-in method __unicode__ of exceptions.SyntaxError object>'
+p59
+sS'__delattr__'
+p60
+S"<method-wrapper '__delattr__' of exceptions.SyntaxError object>"
+p61
+sS'__repr__'
+p62
+S"<method-wrapper '__repr__' of exceptions.SyntaxError object>"
+p63
+sS'__hash__'
+p64
+S"<method-wrapper '__hash__' of exceptions.SyntaxError object>"
+p65
+ssS'evalue'
+p66
+S'invalid table/column name "exp" is a "ALL" reserved SQL/NOSQL keyword'
+p67
+sS'request'
+p68
+cgluon.html
+XML_unpickle
+p69
+(S's\x05e\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>c2302779189</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>appadmin</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-c66b7cf9-d9d6-43f4-a80f-6ed310b64054<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_app1</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_bloger</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-6980bba2-aedf-428d-a454-8efbbcf9de32<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-940c1470-a3bf-45cb-b1d3-b0022a649117<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>ar,en-US;q=0.8,en;q=0.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-940c1470-a3bf-45cb-b1d3-b0022a649117; session_id_bloger=127.0.0.1-6980bba2-aedf-428d-a454-8efbbcf9de32; session_id_app1=127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6; session_id_admin=127.0.0.1-c66b7cf9-d9d6-43f4-a80f-6ed310b64054</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/app1/models/dbacc.py?id=models__dbacc__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/45.0.2454.101 Chrome/45.0.2454.101 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_WEB2PY_COMPONENT_ELEMENT</td><td style="vertical-align:top;">:</td><td><div>c2302779189</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_WEB2PY_COMPONENT_LOCATION</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/app1/models/dbacc.py?id=models__dbacc__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REQUESTED_WITH</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/app1/appadmin/hooks</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>45936</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>mohbastawi-Satellite-C660</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/mohbastawi/web2py/applications/admin/&#x27;, &#x27;/home/mohbastawi/web2py/applications/bloger/&#x27;, &#x27;/home/mohbastawi/web2py/applications/app1/&#x27;, &#x27;/home/mohbastawi/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7fd601d30830: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;scheduler_groups&#x27;: None, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;mohbastawi-Satellite-C660&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/mohbastawi/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>ar,en-US;q=0.8,en;q=0.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-940c1470-a3bf-45cb-b1d3-b0022a649117; session_id_bloger=127.0.0.1-6980bba2-aedf-428d-a454-8efbbcf9de32; session_id_app1=127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6; session_id_admin=127.0.0.1-c66b7cf9-d9d6-43f4-a80f-6ed310b64054</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/app1/models/dbacc.py?id=models__dbacc__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/45.0.2454.101 Chrome/45.0.2454.101 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_web2py_component_element</td><td style="vertical-align:top;">:</td><td><div>c2302779189</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_web2py_component_location</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/app1/models/dbacc.py?id=models__dbacc__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_requested_with</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>mohbastawi-Satellite-C660</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/app1/appadmin/hooks</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>45936</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/app1/appadmin/hooks</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>mohbastawi-Satellite-C660</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.12.3-stable+timestamp.2015.08.19.00.18.03</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7fd60a03e1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7fd601dc6258&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7fd5c3d4f8d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7fd60a03e1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7fd601dc6258&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7fd5c3d4f8d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py/applications/app1/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>hooks</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/mohbastawi/web2py/applications/admin/&#x27;, &#x27;/home/mohbastawi/web2py/applications/bloger/&#x27;, &#x27;/home/mohbastawi/web2py/applications/app1/&#x27;, &#x27;/home/mohbastawi/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7fd601d30830: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;scheduler_groups&#x27;: None, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;mohbastawi-Satellite-C660&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/mohbastawi/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>mohbastawi-Satellite-C660</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.12.3-stable+timestamp.2015.08.19.00.18.03</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_sheduler</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2015, 10, 14, 19, 41, 5, 451785)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/app1/appadmin/hooks</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2015, 10, 14, 17, 41, 5, 451833)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7fd5d8b346d0&gt;</div></td></tr></table></div>'
+tRp70
+sS'frames'
+p71
+(lp72
+(dp73
+S'file'
+p74
+S'/home/mohbastawi/web2py/gluon/restricted.py'
+p75
+sS'dump'
+p76
+(dp77
+S'environment'
+p78
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p79
+sS'ccode'
+p80
+S'<code object <module> at 0x7fd5d808f730, file "/...eb2py/applications/app1/models/dbacc.py", line 1>'
+p81
+ssS'lnum'
+p82
+I227
+sS'lines'
+p83
+(dp84
+I224
+S'            ccode = code'
+p85
+sI225
+S'        else:'
+p86
+sI226
+S'            ccode = compile2(code, layer)'
+p87
+sI227
+S'        exec ccode in environment'
+p88
+sI228
+S'    except HTTP:'
+p89
+sI229
+S'        raise'
+p90
+sI230
+S'    except RestrictedError:'
+p91
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p92
+sI222
+S'    try:'
+p93
+sI223
+S'        if isinstance(code, types.CodeType):'
+p94
+ssS'call'
+p95
+S'(code="db.define_table(\'doct\',\\n                Field(\'d...          Field(\'expmount\',\'integer\',default=0))\\n", environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/mohbastawi/web2py/applications/app1/models/dbacc.py\')'
+p96
+sS'func'
+p97
+S'restricted'
+p98
+sa(dp99
+g74
+S'/home/mohbastawi/web2py/applications/app1/models/dbacc.py'
+p100
+sg76
+(dp101
+S'default'
+p102
+S'undefined'
+p103
+sS'Field'
+p104
+S"<class 'pydal.objects.Field'>"
+p105
+ssg82
+I20
+sg83
+(dp106
+I11
+S"                Field('prodname','reference prod',requires=IS_IN_DB(db,db.prod.id,'%(prodname)s'),label='\xd8\xaa\xd9\x83\xd9\x84\xd9\x81\xd8\xa9 \xd8\xa7\xd9\x84\xd9\x81\xd8\xad\xd8\xb5'),"
+p107
+sI12
+S"                Field('sabgha','integer',default=0,label='\xd8\xb3\xd8\xb9\xd8\xb1 \xd8\xa7\xd9\x84\xd8\xb5\xd8\xa8\xd8\xba\xd9\x87'),"
+p108
+sI13
+S"                Field('totalcost',compute=lambda row: db.prod(row['docname']).prodcost+row['sabgha']),"
+p109
+sI14
+S"                Field('ordate','date',default=request.now),"
+p110
+sI15
+S"                Field('ortime','time',default=request.now),"
+p111
+sI16
+S"                Field('notes','text'))"
+p112
+sI17
+S''
+sI18
+S"db.define_table('exp',"
+p113
+sI19
+S"               Field('expname'),"
+p114
+sI20
+S"               Field('expmount','integer',default=0))"
+p115
+ssg95
+S'()'
+p116
+sg97
+S'<module>'
+p117
+sa(dp118
+g74
+S'/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py'
+p119
+sg76
+(dp120
+S'self.check_reserved_keyword'
+p121
+S'<bound method DAL.check_reserved_keyword of <DAL uri="sqlite://storage.sqlite">>'
+p122
+sS'self'
+p123
+S'<DAL uri="sqlite://storage.sqlite">'
+p124
+sS'tablename'
+p125
+S"'exp'"
+p126
+ssg82
+I809
+sg83
+(dp127
+I804
+S"                raise SyntaxError('table already defined: %s' % tablename)"
+p128
+sI805
+S"        elif tablename.startswith('_') or hasattr(self,tablename) or \\"
+p129
+sI806
+S'                REGEX_PYTHON_KEYWORDS.match(tablename):'
+p130
+sI807
+S"            raise SyntaxError('invalid table name: %s' % tablename)"
+p131
+sI808
+S'        elif self.check_reserved:'
+p132
+sI809
+S'            self.check_reserved_keyword(tablename)'
+p133
+sI810
+S'        else:'
+p134
+sI811
+S'            invalid_args = set(args)-TABLE_ARGS'
+p135
+sI812
+S'            if invalid_args:'
+p136
+sI813
+S'                raise SyntaxError(\'invalid table "%s" attributes: %s\' \\'
+p137
+ssg95
+S'(self=<DAL uri="sqlite://storage.sqlite">, tablename=\'exp\', *fields=(<pydal.objects.Field object>, <pydal.objects.Field object>), **args={})'
+p138
+sg97
+S'define_table'
+p139
+sa(dp140
+g74
+S'/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py'
+p141
+sg76
+(dp142
+S'backend.upper'
+p143
+S'<built-in method upper of str object>'
+p144
+sS'name'
+p145
+S"'exp'"
+p146
+sS'backend'
+p147
+S"'all'"
+p148
+ssg82
+I521
+sg83
+(dp149
+I516
+S'        Uses self.check_reserve which is a list of operators to use.'
+p150
+sI517
+S'        """'
+p151
+sI518
+S'        for backend in self.check_reserved:'
+p152
+sI519
+S'            if name.upper() in self.RSK[backend]:'
+p153
+sI520
+S'                raise SyntaxError('
+p154
+sI521
+S'                    \'invalid table/column name "%s" is a "%s" reserved SQL/NOSQL keyword\' % (name, backend.upper()))'
+p155
+sI522
+S''
+sI523
+S'    def parse_as_rest(self,patterns,args,vars,queries=None,nested_select=True):'
+p156
+sI524
+S'        """'
+p157
+sI525
+S'        Example:'
+p158
+ssg95
+S'(self=<DAL uri="sqlite://storage.sqlite">, name=\'exp\')'
+p159
+sg97
+S'check_reserved_keyword'
+p160
+sasS'pyver'
+p161
+S'Python 2.7.6: /usr/bin/python (prefix: /usr)'
+p162
+sS'session'
+p163
+g69
+(S's6\x01\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">last_orderby</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_query</td><td style="vertical-align:top;">:</td><td><div>db.orday.id&gt;0</div></td></tr></table></div>'
+tRp164
+sS'etype'
+p165
+S"<type 'exceptions.SyntaxError'>"
+p166
+sS'date'
+p167
+S'Wed Oct 14 19:41:05 2015'
+p168
+sS'response'
+p169
+g69
+(S's\xec\x17\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7fd5c3656960&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_app1</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^appadmin/\\w+\\.py$</div></td></tr><tr><td><div>^appadmin/hooks/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_key</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/mohbastawi/web2py/applications/app1/sessions/145/0f0/127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6&#x27;, mode &#x27;rb+&#x27; at 0x7fd5f8382420&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/mohbastawi/web2py/applications/app1/sessions/127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>ec5b7d879ec26c3a293c1b73fabbcbf5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-e3300cd0-1b5f-4009-8db8-8c2fa47584c6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>app1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>appadmin/hooks.html</div></td></tr></table></div>'
+tRp170
+sS'locals'
+p171
+(dp172
+S'self'
+p173
+S'<DAL uri="sqlite://storage.sqlite">'
+p174
+sS'name'
+p175
+S"'exp'"
+p176
+sS'backend'
+p177
+S"'all'"
+p178
+sssS'traceback'
+p179
+S'Traceback (most recent call last):\n  File "/home/mohbastawi/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/mohbastawi/web2py/applications/app1/models/dbacc.py", line 20, in <module>\n    Field(\'expmount\',\'integer\',default=0))\n  File "/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py", line 809, in define_table\n    self.check_reserved_keyword(tablename)\n  File "/home/mohbastawi/web2py/gluon/packages/dal/pydal/base.py", line 521, in check_reserved_keyword\n    \'invalid table/column name "%s" is a "%s" reserved SQL/NOSQL keyword\' % (name, backend.upper()))\nSyntaxError: invalid table/column name "exp" is a "ALL" reserved SQL/NOSQL keyword\n'
+p180
+s.

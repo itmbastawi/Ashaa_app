@@ -1,0 +1,37 @@
+{{extend 'addpages.html'}}
+
+<div class="row">
+  <div class="col-xs-10 col-md-10">
+ <div class="view_or">
+
+  <h2 class='title'>بيان فحص أشعة</h2>
+
+{{for row in rows:}}
+           <p class='title'>   نوع الفحص/{{=db.prod(row.prodname).prodname}}    </p>
+
+     <p>       رقم الطلب/{{=row.id}}      </p> 
+     
+      <p> اسم العميل/{{=row.custname}}      </p>
+
+      <p>        طبيب الاشعة:  {{=db.doct(row.docname).docname}}      <div>      الطبيب المعالج  : {{=row.docch}}     </div></p>
+     
+
+
+      <p><div>    تكلفة الفحص /      {{=db.prod(row.prodname).prodcost}}      </div>
+       <div>     تكلفة الصبغة /{{=row.sabgha}} </div>    
+              <h3>      التكلفه الاجماليه{{=row.totalcost}}    </h3> 
+        </p>
+      <p> {{=row.ortime}}     </p>
+      <p>  ملاحظات:{{=row.notes}}     </p> 
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+   {{pass}}
+{{=A('تعديل او حذف',_class="btn btn-warning",_href=URL('edit_order',args=row.id))}}
+    </div>
+</div>

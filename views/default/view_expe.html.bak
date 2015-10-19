@@ -1,0 +1,18 @@
+{{extend 'addpages.html'}}
+
+<div class="row">
+  <div class="col-xs-6 col-md-6">
+  {{for row in rows:}}
+      <p>بيان المنصرف /{{=row.expename}}     </p> 
+      <p>  القيمة المنصرف / {{=row.expemount}} ج</p>  
+        <p> نوع المنصرف /{{=db.expety(row.expetype).expetype}}     </p>
+      
+      <p>{{=row.expedate}}     </p>
+      
+      
+      
+      
+       {{pass}}
+{{=A('تعديل او حذف',_class="btn btn-warning",_href=URL('edit_expe',args=row.id))}}
+    </div>
+</div>
